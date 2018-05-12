@@ -51,7 +51,7 @@ class Funcionario {
                 return this.salarioBase * 0.85;
             }
         } else {
-            return 0;
+            return this.salarioBase * 0.7;
         }
         
     }
