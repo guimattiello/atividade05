@@ -17,7 +17,7 @@ public class FuncionarioTest {
     }
 
     @Test
-    public void desenvolvedorTest() {
+    public void desenvolvedorMaior3000Test() {
     
         Funcionario f = new Funcionario();
         f.setNome("Guilherme");
@@ -25,7 +25,7 @@ public class FuncionarioTest {
         f.setSalarioBase(5000.00);
         f.setCargo("DESENVOLVEDOR");
         
-        assertEquals(4000.00, f.getSalarioLiquido());
+        assertEquals(4000.00, f.getSalarioLiquido(), 0.01);
         
     }
 }
