@@ -38,4 +38,15 @@ public class FuncionarioTest {
         assertEquals(1800.00, f.getSalarioLiquido(), 0.01);
     }
     
+    @Test
+    public void dbaMaior2000Test() {
+        Funcionario f = new Funcionario();
+        f.setNome("Joao");
+        f.setEmail("joao@utfpr.edu.br");
+        f.setSalarioBase(2800.00);
+        f.setCargo("DBA");
+        
+        assertEquals(2100.00, f.getSalarioLiquido(), 0.01);
+    }
+    
 }
