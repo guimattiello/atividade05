@@ -9,7 +9,7 @@
  * @author guimat
  */
 class Funcionario {
-
+    
     String nome;
     String email;
     double salarioBase;
@@ -18,24 +18,30 @@ class Funcionario {
     void setNome(String pNome) {
         this.nome = pNome;
     }
-
+    
     void setEmail(String pEmail) {
         this.email = pEmail;
     }
-
+    
     void setSalarioBase(double pSalarioBase) {
         this.salarioBase = pSalarioBase;
     }
-
+    
     void setCargo(String pCargo) {
         this.cargo = pCargo;
     }
     
     double getSalarioLiquido() {
-        if (this.salarioBase >= 3000)
-            return this.salarioBase * 0.8;
-        else
-            return this.salarioBase * 0.9;
+        if (this.cargo.equals("DESENVOLVEDOR")) {
+            if (this.salarioBase >= 3000) {
+                return this.salarioBase * 0.8;
+            } else {
+                return this.salarioBase * 0.9;
+            }
+        } else {
+            return this.salarioBase * 0.75;
+        }
+        
     }
     
 }
