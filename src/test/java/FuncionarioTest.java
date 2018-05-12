@@ -61,7 +61,7 @@ public class FuncionarioTest {
     }
     
     @Test
-    public void testadorMenor2000Test() {
+    public void testadorMaior2000Test() {
         Funcionario f = new Funcionario();
         f.setNome("Wilson");
         f.setEmail("wilson@utfpr.edu.br");
