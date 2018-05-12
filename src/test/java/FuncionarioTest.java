@@ -18,7 +18,6 @@ public class FuncionarioTest {
 
     @Test
     public void desenvolvedorMaior3000Test() {
-    
         Funcionario f = new Funcionario();
         f.setNome("Guilherme");
         f.setEmail("guilhermer@utfpr.edu.br");
@@ -26,6 +25,17 @@ public class FuncionarioTest {
         f.setCargo("DESENVOLVEDOR");
         
         assertEquals(4000.00, f.getSalarioLiquido(), 0.01);
-        
     }
+    
+    @Test
+    public void desenvolvedorMenor3000Test() {
+        Funcionario f = new Funcionario();
+        f.setNome("Guilherme");
+        f.setEmail("guilhermer@utfpr.edu.br");
+        f.setSalarioBase(2000.00);
+        f.setCargo("DESENVOLVEDOR");
+        
+        assertEquals(1800.00, f.getSalarioLiquido(), 0.01);
+    }
+    
 }
