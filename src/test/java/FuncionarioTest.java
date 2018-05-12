@@ -92,4 +92,15 @@ public class FuncionarioTest {
         
         assertEquals(5600.00, f.getSalarioLiquido(), 0.01);
     }
+    
+    @Test
+    public void gerenteMenor5000Test() {
+        Funcionario f = new Funcionario();
+        f.setNome("Carlos");
+        f.setEmail("carlos@utfpr.edu.br");
+        f.setSalarioBase(4500.00);
+        f.setCargo("GERENTE");
+        
+        assertEquals(3600.00, f.getSalarioLiquido(), 0.01);
+    }
 }
