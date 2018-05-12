@@ -38,12 +38,14 @@ class Funcionario {
             } else {
                 return this.salarioBase * 0.9;
             }
-        } else {
+        } else if (this.cargo.equals("DBA")){
             if (this.salarioBase >= 2000) {
                 return this.salarioBase * 0.75;
             } else {
                 return this.salarioBase * 0.85;
             }
+        } else {
+            return 0;
         }
         
     }
