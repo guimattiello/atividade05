@@ -32,7 +32,10 @@ class Funcionario {
     }
     
     double getSalarioLiquido() {
-        return this.salarioBase * 0.8;
+        if (this.salarioBase >= 3000)
+            return this.salarioBase * 0.8;
+        else
+            return this.salarioBase * 0.9;
     }
     
 }
