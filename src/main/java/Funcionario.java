@@ -51,7 +51,11 @@ class Funcionario {
                 return this.salarioBase * 0.85;
             }
         } else {
-            return this.salarioBase * 0.7;
+            if (this.salarioBase >= 5000) {
+                return this.salarioBase * 0.70;
+            } else {
+                return this.salarioBase * 0.8;
+            }
         }
         
     }
